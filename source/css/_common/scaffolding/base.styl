@@ -1,5 +1,5 @@
 ::selection {
-  background: $selection-bg;
+  background: $z-selection;
   color: $selection-color;
 }
 
@@ -9,7 +9,7 @@ html, body {
 
 body {
   background: $body-bg-color;
-  color: $text-color;
+  color: $z-body-font;
   font-family: $font-family-base;
   font-size: $font-size-base;
   line-height: $line-height-base;
@@ -41,14 +41,32 @@ p {
 
 a, span.exturl {
   word-wrap();
-  border-bottom: 1px solid $link-decoration-color;
-  color: $link-color;
+  // border-bottom: 1px solid $z-a;
+  color: $z-a;
   outline: 0;
   text-decoration: none;
+  position: relative;
 
+  &::before {
+    background: $z-a-hover;
+    bottom: 0;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    visibility: hidden;
+    width: 100%;
+    the-transition();
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+    visibility: visible;
+  }
   &:hover {
-    border-bottom-color: $link-decoration-hover-color;
-    color: $link-hover-color;
+    // border-bottom-color: $z-a-hover;
+    color: $z-a-hover;
   }
 
   // For spanned external links.

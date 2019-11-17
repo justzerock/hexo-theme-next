@@ -18,7 +18,7 @@
 
   a {
     border-bottom: none;
-    color: $link-color;
+    color: $z-a;
     display: block;
     font-size: $font-size-small;
     line-height: 1.6;
@@ -26,7 +26,11 @@
 
     &:hover {
       border-bottom: none;
-      color: $link-hover-color;
+      color: $z-a-hover;
+    }
+
+    &::before {
+      display: none;
     }
 
     &:active {

@@ -18,13 +18,13 @@
 
     a {
       border-bottom-color: $toc-link-border-color;
-      color: $toc-link-color;
+      color: $z-sidebar-font;
       transition-property: all;
       the-transition();
 
       &:hover {
-        border-bottom-color: $toc-link-hover-border-color;
-        color: $toc-link-hover-color;
+        border-bottom-color: $z-sidebar-font-hover;
+        color: $z-sidebar-font-hover;
       }
     }
   }
@@ -58,15 +58,15 @@
     }
 
     .active > a {
-      border-bottom-color: $toc-link-active-border-color;
-      color: $toc-link-active-color;
+      border-bottom-color: $z-sidebar-font;
+      color: $z-sidebar-font;
     }
 
     .active-current > a {
-      color: $toc-link-active-current-color;
+      color: $z-sidebar-font-hover;
 
       &:hover {
-        color: $toc-link-active-current-border-color;
+        color: $z-sidebar-font-hover;
       }
     }
   }

@@ -31,13 +31,13 @@
 
 .posts-expand .post-title-link {
   border-bottom: none;
-  color: $black-light;
+  color: $z-post-title;
   display: inline-block;
   position: relative;
   vertical-align: top;
 
   &::before {
-    background: black;
+    background: $z-post-title;
     bottom: 0;
     content: '';
     height: 2px;
@@ -61,7 +61,7 @@
 }
 
 .posts-expand .post-meta {
-  color: $grey-dark;
+  color: $z-green-light;
   font-family: $font-family-posts;
   font-size: $font-size-smallest;
   margin: 3px 0 60px 0;
@@ -73,7 +73,7 @@
   }
 
   time {
-    border-bottom: 1px dashed $grey-dark;
+    border-bottom: 1px dashed $z-green-light;
     cursor: pointer;
   }
 }

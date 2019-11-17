@@ -10,20 +10,24 @@
 .brand {
   background: $brand-bg;
   border-bottom: none;
-  color: $brand-color;
+  color: $z-head-a;
   display: inline-block;
   line-height: $font-size-title;
   padding: 0 40px;
   position: relative;
 
   &:hover {
-    color: $brand-hover-color;
+    color: $z-head-a-hover;
+  }
+  &::before {
+    display: none;
   }
 }
 
 .site-title {
   display: inline-block;
-  font-family: $font-family-logo;
+  font-family: 'I.Ngaan'
+  /*font-family: $font-family-logo;*/
   font-size: $font-size-title;
   font-weight: normal;
   line-height: 1.5;
@@ -31,6 +35,7 @@
 }
 
 .site-subtitle {
+  font-family: 'SoukouMincho'
   color: $subtitle-color;
   font-size: $font-size-subtitle;
   margin-top: 10px;
