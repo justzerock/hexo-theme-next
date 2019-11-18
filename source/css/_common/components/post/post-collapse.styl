@@ -78,10 +78,10 @@
     }
 
     &:hover {
-      border-bottom-color: $grey-dim;
+      border-bottom-color: $z-head-bg;
 
       &::before {
-        background: $black-deep;
+        background: $z-head-bg;
       }
     }
   }
@@ -101,7 +101,10 @@
 
     a, span.exturl {
       border-bottom: none;
-      color: $grey-dim;
+      color: $z-body-font;
+      &::before {
+        display: none;
+      }
     }
   }
 
