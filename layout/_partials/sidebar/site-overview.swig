@@ -133,3 +133,15 @@
     </ul>
   </div>
 {%- endif %}
+
+{# 论语 #}
+{%- if config.subtitles %}
+  <div class="lunyu">
+    <div class="item">
+      {{ config.subtitles.first }}
+    </div>
+    <div class="item">
+      {{ config.subtitles.second }}
+    </div>
+  </div>
+{%- endif %}

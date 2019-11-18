@@ -26,6 +26,9 @@
         border-bottom-color: $z-sidebar-font-hover;
         color: $z-sidebar-font-hover;
       }
+      &::before {
+        display: none;
+      }
     }
   }
 
@@ -60,6 +63,9 @@
     .active > a {
       border-bottom-color: $z-sidebar-font;
       color: $z-sidebar-font;
+      &::before {
+        display: none;
+      }
     }
 
     .active-current > a {
@@ -67,6 +73,9 @@
 
       &:hover {
         color: $z-sidebar-font-hover;
+      }
+      &::before {
+        display: none;
       }
     }
   }

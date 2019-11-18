@@ -168,10 +168,18 @@ if (hexo-config('local_search.enable')) {
     p.search-result {
       border-bottom: 1px dashed $grey-light;
       padding: 5px 0;
+      color: $z-body-font;
     }
 
     a.search-result-title {
       font-weight: bold;
+      color: $z-post-title;
+      &:hover {
+        opacity: .8;
+      }
+      &::before {
+        display: none;
+      }
     }
 
     .search-keyword {
