@@ -1,0 +1,15 @@
+
+/* ubuntu-mono-regular */
+@font-face {
+  font-family: 'Ubuntu Mono';
+  font-style: normal;
+  font-weight: regular;
+  src: url('//lib.baomitu.com/fonts/ubuntu-mono/ubuntu-mono-regular.eot'); /* IE9 Compat Modes */
+  src: local('Ubuntu Mono'), local('UbuntuMono-Normal'),
+       url('//lib.baomitu.com/fonts/ubuntu-mono/ubuntu-mono-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('//lib.baomitu.com/fonts/ubuntu-mono/ubuntu-mono-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('//lib.baomitu.com/fonts/ubuntu-mono/ubuntu-mono-regular.woff') format('woff'), /* Modern Browsers */
+       url('//lib.baomitu.com/fonts/ubuntu-mono/ubuntu-mono-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('//lib.baomitu.com/fonts/ubuntu-mono/ubuntu-mono-regular.svg#UbuntuMono') format('svg'); /* Legacy iOS */
+}
+  
