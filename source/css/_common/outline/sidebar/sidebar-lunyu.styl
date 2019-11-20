@@ -1,11 +1,18 @@
 .lunyu {
   writing-mode: vertical-rl;
-  color: $z-head-a;
-  opacity: .8;
+  color: rgb(255, 255, 255);
+  opacity: 0.8;
   margin: 20px auto;
-  font-family: $z-font-min;
+  font-family: $z-font-min2;
   font-size: 2em;
+  background: linear-gradient(100deg, #ffffff, #d8e1e6);
   user-select: none;
-  letter-spacing: .2em;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+  -webkit-background-clip: text;
+  letter-spacing: 0.2em;
+  -webkit-text-fill-color: transparent;
+  .item {  
+    &:not(:first-child) {
+      font-family: $z-font-min
+    }
+  }
 }

@@ -32,11 +32,12 @@ $z-a-bg       = #faecf1;
 $z-body-font  = #718c8c;
 $z-post-title = $z-head-bg;
 $z-code       = $z-selection;
-$z-green-light = #98aaaa;
-$z-sidebar-font = rgba(255, 255, 255, .5);
-$z-sidebar-font-hover = rgba(255, 255, 255, .8);
+$z-body-font-light = #98aaaa;
+$z-sidebar-font = rgba(255, 255, 255, .8);
+$z-sidebar-font-hover = rgba(255, 255, 255, 1);
 $z-font-yan   = 'I.Ngaan';
 $z-font-min   = 'SoukouMincho'
+$z-font-min2  = 'genkai-mincho'
 
 // Scaffolding
 // Settings for some of the most global styles.
@@ -84,7 +85,7 @@ $font-family-headings     = get_font_family('headings'), $font-family-base if ge
 $font-family-posts        = $font-family-base;
 $font-family-posts        = get_font_family('posts'), $font-family-base if get_font_family('posts');
 
-$font-family-monospace    = 'Ubuntu Mono', consolas, Menlo, $font-family-chinese;
+$font-family-monospace    = consolas, Menlo, $font-family-chinese;
 $font-family-monospace    = get_font_family('codes'), consolas, Menlo, $font-family-chinese if get_font_family('codes');
 
 $font-family-icons        = 'FontAwesome';
