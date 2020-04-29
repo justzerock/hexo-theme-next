@@ -1,25 +1,5 @@
-.posts-expand {
+.content {
   padding-top: 40px;
-
-  +mobile() {
-    margin: 0 20px;
-  }
-
-  .post-block.home {
-    padding: 20px;
-    transition all .3s;
-    border-radius: 10px
-    box-shadow: 0px 0px 4px
-    &:hover {
-      box-shadow: 0px 0px 10px
-    }
-    .post-footer {
-      display: none;
-    }
-    &:not(:first-child) {
-      margin-top: 60px;
-    }
-  }
 }
 
 .post-body {
@@ -31,7 +11,7 @@
     text-align: unquote(hexo-config('text_align.mobile'));
   }
 
-  h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6 {
     padding-top: 10px;
 
     .header-anchor {
@@ -48,16 +28,6 @@
 
     &:hover .header-anchor {
       visibility: visible;
-    }
-  }
-
-  img {
-    border: 1px solid $gray-lighter;
-    box-sizing: border-box;
-    padding: 3px;
-
-    +mobile() {
-      padding: initial;
     }
   }
 

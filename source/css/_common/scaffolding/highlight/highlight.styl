@@ -20,24 +20,10 @@ pre, code {
 
 code {
   background: $code-background;
-  border-radius: $code-border-radius;
-  color: $z-code;
+  border-radius: 3px;
+  color: $code-foreground;
   padding: 2px 4px;
   word-wrap();
-}
-
-pre {
-  @extend $code-block;
-  overflow: auto;
-  padding: 10px;
-
-  code {
-    background: none;
-    color: $highlight-foreground;
-    font-size: $table-font-size;
-    padding: 0;
-    text-shadow: none;
-  }
 }
 
 .highlight {
@@ -67,16 +53,16 @@ pre {
   }
 
   figcaption {
-    background: $code-background;
+    background: $highlight-gutter.bg-color;
     color: $highlight-foreground;
-    line-height: 1em;
-    margin: 0;
+    display: flex;
+    font-size: $table-font-size;
+    justify-content: space-between;
+    line-height: 1.2;
     padding: .5em;
-    clearfix();
 
     a {
       color: $highlight-foreground;
-      float: right;
 
       &:hover {
         border-bottom-color: $highlight-foreground;
@@ -84,12 +70,16 @@ pre {
     }
   }
 
-  .gutter pre {
-    background: $highlight-gutter.bg-color;
-    color: $highlight-gutter.color;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: right;
+  .gutter {
+    disable-user-select();
+
+    pre {
+      background: $highlight-gutter.bg-color;
+      color: $highlight-gutter.color;
+      padding-left: 10px;
+      padding-right: 10px;
+      text-align: right;
+    }
   }
 
   .code pre {
@@ -97,10 +87,6 @@ pre {
     padding-left: 10px;
     width: 100%;
   }
-}
-
-.gutter {
-  disable-user-select();
 }
 
 .gist table {
@@ -112,6 +98,17 @@ pre {
 }
 
 pre {
+  @extend $code-block;
+  overflow: auto;
+  padding: 10px;
+
+  code {
+    background: none;
+    color: $highlight-foreground;
+    font-size: $table-font-size;
+    padding: 0;
+    text-shadow: none;
+  }
   // For diff highlight
   .deletion {
     background: $highlight-deletion;

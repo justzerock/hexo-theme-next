@@ -1,5 +1,5 @@
 .site-meta {
-  margin: 0;
+  flex-grow: 1;
   text-align: $site-meta-text-align;
 
   +mobile() {
@@ -8,39 +8,30 @@
 }
 
 .brand {
-  background: none;
   border-bottom: none;
-  color: $z-sidebar-font;
+  color: var(--brand-color);
   display: inline-block;
   line-height: $font-size-title;
   padding: 0 40px;
   position: relative;
 
   &:hover {
-    color: $z-sidebar-font-hover;
-  }
-  &::before {
-    display: none;
+    color: var(--brand-hover-color);
   }
 }
 
 .site-title {
-  display: inline-block;
-  font-family: $z-font-min;
-  /*font-family: $font-family-logo;*/
+  font-family: $font-family-logo;
   font-size: $font-size-title;
   font-weight: normal;
-  line-height: 1.5;
-  vertical-align: top;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
-  letter-spacing: .2em;
+  margin: 0;
 }
 
 .site-subtitle {
   font-family: $z-font-min;
   color: $z-body-font-light;
   font-size: $font-size-subtitle;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 .use-motion {

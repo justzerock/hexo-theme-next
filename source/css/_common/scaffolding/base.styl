@@ -8,8 +8,8 @@ html, body {
 }
 
 body {
-  background: $body-bg-color;
-  color: $z-body-font;
+  background: var(--body-bg-color);
+  color: var(--text-color);
   font-family: $font-family-base;
   font-size: $font-size-base;
   line-height: $line-height-base;
@@ -41,7 +41,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
-  padding: 0;
 }
 
 for headline in (1 .. 6) {
@@ -55,17 +54,15 @@ p {
 }
 
 a, span.exturl {
-  word-wrap();
-  // border-bottom: 1px solid $z-a;
-  color: $z-a;
+  border-bottom: 1px solid $link-decoration-color;
+  color: var(--link-color);
   outline: 0;
   text-decoration: none;
-  position: relative;
-  transition: all .3s;
+  word-wrap();
+
   &:hover {
-    // border-bottom-color: $z-a-hover;
-    // color: $z-a-hover;
-    background: $z-a-bg;
+    border-bottom-color: var(--link-hover-color);
+    color: var(--link-hover-color);
   }
 
   // For spanned external links.
@@ -80,17 +77,15 @@ iframe, img, video {
 }
 
 hr {
-  background-color: $gray-lighter;
-  background-image: repeating-linear-gradient(-45deg, white, white 4px, transparent 4px, transparent 8px);
+  background-image: repeating-linear-gradient(-45deg, $grey-lighter, $grey-lighter 4px, transparent 4px, transparent 8px);
   border: 0;
   height: 3px;
   margin: 40px 0;
 }
 
 blockquote {
-  border-left: 4px solid $z-a;
-  color: $z-body-font-light;
-  background: #f6f6f6;
+  border-left: 4px solid $grey-lighter;
+  color: var(--blockquote-color);
   margin: 0;
   padding: 0 15px;
 
@@ -101,7 +96,7 @@ blockquote {
 }
 
 dt {
-  font-weight: $font-weight-bolder;
+  font-weight: bold;
 }
 
 dd {
@@ -115,6 +110,7 @@ kbd {
   border: 1px solid $grey-light;
   border-radius: .2em;
   box-shadow: .1em .1em .2em rgba(0, 0, 0, .1);
+  color: $code-foreground;
   font-family: inherit;
   padding: .1em .3em;
   white-space: nowrap;
